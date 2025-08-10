@@ -60,7 +60,8 @@
     "client": "react-scripts --openssl-legacy-provider start",
     "build": "react-scripts --openssl-legacy-provider build",
     "test": "react-scripts eject",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "seeder": "node api/utils/seeder.js"
   },
   "eslintConfig": {
     "extends": [
@@ -79,5 +80,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^9.9.0"
   }
 }

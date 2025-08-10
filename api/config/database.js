@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
-const MONGO_URI = process.env.MONGO_URI;
 
 const connectDatabase = () => {
-    mongoose.connect(MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
-        .then(() => {
-            console.log("Mongoose Connected");
+    const MONGO_URI = process.env.MONGO_URI;
+    mongoose.connect(MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true })
+        .then((data) => {
+            console.log(`Mongoose Connected with Host: ${data.connection.host}`);
         });
 }
 
